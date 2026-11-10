@@ -1,0 +1,9 @@
+Outlier,Target,Model,RMSE_log
+đã loại,log1p,Ridge,0.12208201973729509
+đã loại,log1p,GBDT,0.12724555604445886
+đã loại,raw,Ridge,0.15737431837930485
+đã loại,raw,GBDT,0.12979470273653101
+giữ lại,log1p,Ridge,0.1387748258422529
+giữ lại,log1p,GBDT,0.12719707082136203
+giữ lại,raw,Ridge,0.352001594410332
+giữ lại,raw,GBDT,0.13119323819094217

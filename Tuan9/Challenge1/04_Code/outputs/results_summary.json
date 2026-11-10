@@ -1,0 +1,306 @@
+{
+ "n_train": 1460,
+ "n_test": 1459,
+ "n_feat": 79,
+ "n_num": 36,
+ "n_cat": 43,
+ "miss_top": {
+  "PoolQC": 99.5,
+  "MiscFeature": 96.3,
+  "Alley": 93.8,
+  "Fence": 80.8,
+  "MasVnrType": 59.7,
+  "FireplaceQu": 47.3
+ },
+ "skew_raw": 1.88,
+ "skew_log": 0.12,
+ "outlier_ids": [
+  524,
+  1299
+ ],
+ "outlier_cond": [
+  "Partial",
+  "Partial"
+ ],
+ "n_train_clean": 1458,
+ "r_top": {
+  "OverallQual": 0.8,
+  "GrLivArea": 0.73,
+  "TotalBsmtSF": 0.65,
+  "GarageCars": 0.64,
+  "1stFlrSF": 0.63,
+  "GarageArea": 0.63,
+  "FullBath": 0.56,
+  "TotRmsAbvGrd": 0.54,
+  "YearBuilt": 0.52,
+  "YearRemodAdd": 0.51,
+  "GarageYrBlt": 0.49
+ },
+ "r_pairs": {
+  "GarageCars~GarageArea": 0.89,
+  "TotalBsmtSF~1stFlrSF": 0.8,
+  "YearBuilt~GarageYrBlt": 0.83
+ },
+ "bench": [
+  {
+   "FeatureSet": "All (79)",
+   "Model": "Ridge",
+   "RMSE": 0.1218,
+   "RMSE_Std": 0.0089,
+   "R2": 0.9065,
+   "CV_time_s": 0.194
+  },
+  {
+   "FeatureSet": "All (79)",
+   "Model": "SVR",
+   "RMSE": 0.1703,
+   "RMSE_Std": 0.019,
+   "R2": 0.8177,
+   "CV_time_s": 0.5046
+  },
+  {
+   "FeatureSet": "All (79)",
+   "Model": "Random Forest",
+   "RMSE": 0.139,
+   "RMSE_Std": 0.0085,
+   "R2": 0.8777,
+   "CV_time_s": 2.0934
+  },
+  {
+   "FeatureSet": "All (79)",
+   "Model": "Gradient Boosting",
+   "RMSE": 0.1269,
+   "RMSE_Std": 0.0098,
+   "R2": 0.8981,
+   "CV_time_s": 4.158
+  },
+  {
+   "FeatureSet": "All (79)",
+   "Model": "XGBoost",
+   "RMSE": 0.1255,
+   "RMSE_Std": 0.0095,
+   "R2": 0.9004,
+   "CV_time_s": 0.73
+  },
+  {
+   "FeatureSet": "SelectKBest (30)",
+   "Model": "Ridge",
+   "RMSE": 0.1354,
+   "RMSE_Std": 0.0067,
+   "R2": 0.8843,
+   "CV_time_s": 0.1524
+  },
+  {
+   "FeatureSet": "SelectKBest (30)",
+   "Model": "SVR",
+   "RMSE": 0.1559,
+   "RMSE_Std": 0.0113,
+   "R2": 0.8475,
+   "CV_time_s": 0.5264
+  },
+  {
+   "FeatureSet": "SelectKBest (30)",
+   "Model": "Random Forest",
+   "RMSE": 0.1461,
+   "RMSE_Std": 0.0098,
+   "R2": 0.8645,
+   "CV_time_s": 1.5905
+  },
+  {
+   "FeatureSet": "SelectKBest (30)",
+   "Model": "Gradient Boosting",
+   "RMSE": 0.1404,
+   "RMSE_Std": 0.007,
+   "R2": 0.8753,
+   "CV_time_s": 2.6798
+  },
+  {
+   "FeatureSet": "SelectKBest (30)",
+   "Model": "XGBoost",
+   "RMSE": 0.1401,
+   "RMSE_Std": 0.0065,
+   "R2": 0.8757,
+   "CV_time_s": 0.5556
+  },
+  {
+   "FeatureSet": "RF Importance (25)",
+   "Model": "Ridge",
+   "RMSE": 0.1287,
+   "RMSE_Std": 0.0088,
+   "R2": 0.8953,
+   "CV_time_s": 2.5157
+  },
+  {
+   "FeatureSet": "RF Importance (25)",
+   "Model": "SVR",
+   "RMSE": 0.1467,
+   "RMSE_Std": 0.0164,
+   "R2": 0.8649,
+   "CV_time_s": 3.0713
+  },
+  {
+   "FeatureSet": "RF Importance (25)",
+   "Model": "Random Forest",
+   "RMSE": 0.1385,
+   "RMSE_Std": 0.009,
+   "R2": 0.8786,
+   "CV_time_s": 4.1664
+  },
+  {
+   "FeatureSet": "RF Importance (25)",
+   "Model": "Gradient Boosting",
+   "RMSE": 0.1269,
+   "RMSE_Std": 0.0097,
+   "R2": 0.8982,
+   "CV_time_s": 5.4667
+  },
+  {
+   "FeatureSet": "RF Importance (25)",
+   "Model": "XGBoost",
+   "RMSE": 0.1255,
+   "RMSE_Std": 0.0098,
+   "R2": 0.9002,
+   "CV_time_s": 3.3227
+  }
+ ],
+ "imp_top10": {
+  "OverallQual": 0.5496,
+  "GrLivArea": 0.1098,
+  "TotalBsmtSF": 0.0455,
+  "GarageCars": 0.0402,
+  "GarageArea": 0.0284,
+  "1stFlrSF": 0.022,
+  "BsmtFinSF1": 0.0209,
+  "GarageType": 0.0152,
+  "YearBuilt": 0.0149,
+  "OverallCond": 0.0129
+ },
+ "imp_top25_share": 94.8,
+ "top25": [
+  "OverallQual",
+  "GrLivArea",
+  "TotalBsmtSF",
+  "GarageCars",
+  "GarageArea",
+  "1stFlrSF",
+  "BsmtFinSF1",
+  "GarageType",
+  "YearBuilt",
+  "OverallCond",
+  "LotArea",
+  "YearRemodAdd",
+  "CentralAir",
+  "MSZoning",
+  "GarageYrBlt",
+  "LotFrontage",
+  "Fireplaces",
+  "BsmtUnfSF",
+  "Neighborhood",
+  "2ndFlrSF",
+  "OpenPorchSF",
+  "TotRmsAbvGrd",
+  "MoSold",
+  "WoodDeckSF",
+  "MasVnrArea"
+ ],
+ "ablation": [
+  {
+   "Outlier": "đã loại",
+   "Target": "log1p",
+   "Model": "Ridge",
+   "RMSE_log": 0.1221
+  },
+  {
+   "Outlier": "đã loại",
+   "Target": "log1p",
+   "Model": "GBDT",
+   "RMSE_log": 0.1272
+  },
+  {
+   "Outlier": "đã loại",
+   "Target": "raw",
+   "Model": "Ridge",
+   "RMSE_log": 0.1574
+  },
+  {
+   "Outlier": "đã loại",
+   "Target": "raw",
+   "Model": "GBDT",
+   "RMSE_log": 0.1298
+  },
+  {
+   "Outlier": "giữ lại",
+   "Target": "log1p",
+   "Model": "Ridge",
+   "RMSE_log": 0.1388
+  },
+  {
+   "Outlier": "giữ lại",
+   "Target": "log1p",
+   "Model": "GBDT",
+   "RMSE_log": 0.1272
+  },
+  {
+   "Outlier": "giữ lại",
+   "Target": "raw",
+   "Model": "Ridge",
+   "RMSE_log": 0.352
+  },
+  {
+   "Outlier": "giữ lại",
+   "Target": "raw",
+   "Model": "GBDT",
+   "RMSE_log": 0.1312
+  }
+ ],
+ "n_feat_fe": 87,
+ "n_skew_cols": 21,
+ "stage": [
+  {
+   "Cấu hình": "Ridge (α=10), 79 biến gốc",
+   "RMSE": 0.1218,
+   "RMSE_Std": 0.0089,
+   "R2": 0.9065
+  },
+  {
+   "Cấu hình": "Ridge tinh chỉnh + FE + log biến lệch",
+   "RMSE": 0.1197,
+   "RMSE_Std": 0.0067,
+   "R2": 0.9095
+  },
+  {
+   "Cấu hình": "Lasso tinh chỉnh + FE + log biến lệch",
+   "RMSE": 0.1188,
+   "RMSE_Std": 0.0081,
+   "R2": 0.9106
+  },
+  {
+   "Cấu hình": "GBDT tinh chỉnh + FE + log biến lệch",
+   "RMSE": 0.1161,
+   "RMSE_Std": 0.0068,
+   "R2": 0.9152
+  },
+  {
+   "Cấu hình": "Blend: 0.25 Ridge + 0.25 Lasso + 0.5 GBDT",
+   "RMSE": 0.1127,
+   "RMSE_Std": 0.0076,
+   "R2": 0.9202
+  }
+ ],
+ "ridge_alpha": 100,
+ "lasso_alpha": 0.002,
+ "blend_w": {
+  "Ridge": 0.25,
+  "Lasso": 0.25,
+  "GBDT": 0.5
+ },
+ "lasso_nonzero": 57,
+ "oof_resid_std": 0.1129,
+ "n_clipped": 1,
+ "sub_stats": {
+  "min": 44699,
+  "50%": 157565,
+  "mean": 178165,
+  "max": 755000
+ }
+}
